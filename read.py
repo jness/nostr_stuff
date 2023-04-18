@@ -17,7 +17,7 @@ start_point = int(start_point.timestamp())
 
 
 def get(since=start_point, author=author):
-    with connect("wss://relay.snort.social") as websocket:
+    with connect(server) as websocket:
 
         payload = ["REQ", "0", {"since": since}]
 
